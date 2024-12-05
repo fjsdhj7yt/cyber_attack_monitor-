@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attack Details</title>
+    <link rel="stylesheet" href="attack-details.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Attack Details</h1>
+    </header>
+    <main>
+      <h2>Predicted Attack</h2>
+      <section id="attack-details">
+        <div id="attack-info"></div>
+        <div id="visualization-image">
+          <!-- The LIME visualization image will be displayed here -->
+        </div>
+
+        <div id="src-ip-info">
+          <!-- Source IP information will be displayed here -->
+        </div>
+
+        <div id="feedback-form">
+          <h3>Feedback</h3>
+          <p>
+            If you think the predicted attack is incorrect, please select the
+            correct attack type:
+          </p>
+          <select id="feedback-select">
+            <option value="">Select attack type</option>
+            <option value="Normal">Normal</option>
+            <option value="Analysis">Analysis</option>
+            <option value="DoS">DoS</option>
+            <option value="Shellcode">Shellcode</option>
+            <option value="Worms">Worms</option>
+            <option value="Other">Other</option>
+            <!-- Added 'Other' option -->
+          </select>
+
+          <!-- Custom input for 'Other' attack type, hidden by default -->
+          <div id="other-attack-input" style="display: none">
+            <label for="custom-attack-name">Enter custom attack name:</label>
+            <input
+              type="text"
+              id="custom-attack-name"
+              placeholder="Custom attack name"
+            />
+          </div>
+
+          <label for="feedback-explanation"
+            >Why do you think this is the correct attack type?</label
+          >
+          <textarea
+            id="feedback-explanation"
+            placeholder="Explain your reasoning here..."
+          ></textarea>
+
+          <button id="submit-feedback">Submit Feedback</button>
+        </div>
+      </section>
+    </main>
+    <script src="attack-details.js"></script>
+  </body>
+</html>

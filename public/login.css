@@ -1,0 +1,143 @@
+/* Global styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Gradient for modern look */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Container for the login box */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Login box styling */
+.login-box {
+  background-color: #1e2d3a; /* Slightly lighter for contrast */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Strong shadow for depth */
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+  position: relative;
+}
+
+/* Heading styling */
+h2 {
+  color: #4caf50; /* Green accent */
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Input group styling */
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  color: #ccc; /* Lighter label color */
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  background-color: #2e3d4d; /* Darker input background */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #4caf50; /* Green border on focus */
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3); /* Green glow on focus */
+}
+
+/* Button styling */
+button {
+  background-color: #4caf50; /* Primary green color */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #3b8d40;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 255, 0, 0.2); /* Glow effect on hover */
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Fade-in animation for smooth entry */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .login-box {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  input,
+  button {
+    font-size: 15px;
+  }
+}

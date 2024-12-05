@@ -1,0 +1,146 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* General Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9; /* Light background for a professional look */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background-color: #243b55;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Main Section Styling */
+main {
+  margin: 2rem auto;
+  padding: 20px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05); /* Soft elevation */
+  overflow-y: auto; /* Allow scrolling for the entire content */
+}
+
+/* Section Headings */
+h2 {
+  color: #243b55;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+/* Attack Details Section */
+#attack-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Attack Info Styling */
+#attack-info {
+  background-color: #f9f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#attack-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #243b55;
+}
+
+#attack-info p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Visualization Section */
+#visualization-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#visualization-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Feedback Form Styling */
+#feedback-form h3 {
+  color: #243b55;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+#feedback-form select,
+#feedback-form textarea,
+#feedback-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+#feedback-form textarea {
+  height: 80px;
+}
+
+#feedback-form button {
+  background-color: #243b55;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#feedback-form button:hover {
+  background-color: #405c7c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+    margin: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  #feedback-form h3 {
+    font-size: 1.2rem;
+  }
+
+  #feedback-form button {
+    font-size: 1rem;
+  }
+}

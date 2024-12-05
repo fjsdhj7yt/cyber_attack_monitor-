@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Attack Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>AI/ML Threat Classification and Incident Response</h1>
+      <!-- Add Login and Logout buttons here -->
+      <button id="login-btn" class="auth-btn login">Login</button>
+      <button id="logout-btn" class="auth-btn logout" style="display: none">
+        Logout
+      </button>
+    </header>
+    <main>
+      <section id="recent-attack">
+        <h2>Most Recent Attack</h2>
+        <div id="recent-attack-details">
+          <!-- Most Recent Attack details will be loaded here -->
+        </div>
+      </section>
+      <section id="attack-logs">
+        <h2>Attack Logs</h2>
+        <div id="attack-logs-list">
+          <!-- Attack Logs will be loaded here -->
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+
+    <!-- Add Login/Logout Button Scripts -->
+    <script>
+      // Check if user is logged in or not
+      const isLoggedIn = false; // Set this to true to simulate a logged-in user
+
+      // Show/Hide login and logout buttons based on login status
+      if (isLoggedIn) {
+        document.getElementById("login-btn").style.display = "none";
+        document.getElementById("logout-btn").style.display = "inline-block";
+      } else {
+        document.getElementById("login-btn").style.display = "inline-block";
+        document.getElementById("logout-btn").style.display = "none";
+      }
+
+      // Login button action
+      document
+        .getElementById("login-btn")
+        .addEventListener("click", function () {
+          window.location.href = "/login"; // Redirect to login page when button is clicked
+        });
+
+      // Logout button action
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", async function () {
+          const response = await fetch("/api/logout", {
+            method: "POST",
+          });
+          const data = await response.json();
+          if (data.success) {
+            window.location.href = "/login"; // Redirect to login page after logout
+          }
+        });
+    </script>
+  </body>
+</html>
